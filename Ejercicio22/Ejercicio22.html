@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>👀Follow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="penguino">
+    <nav>
+      <ul class="menu">
+        <li><a href="">Inicio</a></li>
+        <li><a href="">Localizacion del pedido</a></li>
+        <li><a href="">Galeria</a></li>
+        <li><a href="">Leer nuestra historia</a></li>
+        <li><a href="">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="wrapper">
+      <p>La Garfield es un grupo de <a href="">jazz fusión</a> originario <a href=""> Guadalajara, México</a> activo desde 2007 como "La Garfield Jazz Band"</p>
+      <p>Los integrantes de este <a href="">proyecto</a> se conocieron mientras cursaban la preparatoria en el Instituto de Ciencias, uno de los mejores colegios de <a href=""> Guadalajara</a>  y comenzaron la banda, al principio sin vocalista, para luego integrar a María Díaz Corona como la cantante principal del grupo.</p>
+      <p>Se ha identificado como <a href=""> influencias</a>  principales a artistas de <a href=""> jazz pop</a> como Amy Winehouse, <a href="">rock latino</a> como Carlos Santana o incluso algunos toques <a href="">funk.</a></p>
+      <p>En <a href="">2013</a>lanzaron su primer álbum:<a href="">Sin Miedo</a> , y en 2015 revelaron su último sencillo <a href=""> "Mala".</a></p>
+    </div>
+</div>>
+<script>
+  const triggers = document.querySelectorAll('a');
+  const highlight = document.createElement('span');
+  highlight.classList.add('highlight');
+  document.body.appendChild(highlight);
+  function highlightLink() {
+    const linkCoords = this.getBoundingClientRect();
+    console.log(linkCoords);
+    const coords = {
+      width: linkCoords.width,
+      height: linkCoords.height,
+      top: linkCoords.top + window.scrollY,
+      left: linkCoords.left + window.scrollX
+    };
+    highlight.style.width = `${coords.width}px`;
+    highlight.style.height = `${coords.height}px`;
+    highlight.style.transform = `translate(${coords.left}px, ${coords.top}px)`;
+  }
+  triggers.forEach(a => a.addEventListener('mouseenter', highlightLink));
+</script>
+</body>
+</html>

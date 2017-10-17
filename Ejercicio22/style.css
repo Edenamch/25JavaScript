@@ -1,0 +1,64 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  #penguino{
+    border-style: solid;
+    border-width: 5px;
+      }
+  body {
+    min-height: 100vh;
+    margin: 0; /* Important! */
+    font-family: sans-serif;
+    background-color:#aee6eb;
+    background-image: url("https://res-4.cloudinary.com/dostuff-media/image/upload//c_fill,g_faces,f_auto,w_800/v1467474566/event-poster-6063463.jpg"),url("https://k60.kn3.net/504BF4950.png");
+    background-blend-mode: normal;
+    background-repeat: no-repeat;
+    background-position-x: 50%; 
+    background-size: 55%;   
+  }
+  
+  .wrapper {
+    margin:0 auto;
+    max-width:500px;
+    font-size: 20px;
+    line-height: 2;
+    position: relative;
+  }
+  
+  a {
+    text-decoration: none;
+    color:black;
+    background:rgba(0,0,0,0.05);
+    border-radius: 20px
+  }
+  
+  .highlight {
+    transition: all 0.2s;
+    border-bottom:2px solid white;
+    position: absolute;
+    top:0;
+    background:white;
+    left:0;
+    z-index: -1;
+    border-radius:20px;
+    display: block;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2)
+  }
+  
+  .menu {
+    padding: 0;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin:100px 0;
+  }
+  
+  .menu a {
+    display: inline-block;
+    padding:5px;
+    margin:0 20px;
+    color:black;
+  }

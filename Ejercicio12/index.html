@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Key Detection</title>
+  <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+</head>
+<body>
+  <p>Abre la consola para una sorpresa!!!!</p>
+  <img src="https://i.pinimg.com/236x/ec/13/a7/ec13a753972c254761be4d9d5666d341--smile-emoji-happy-faces-emoji.jpg"/>
+<script>
+const pressed = [];
+const secretCode = '3';
+window.addEventListener('keyup', (e) => {
+  console.log(e.key);
+  pressed.push(e.key);
+  pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+  if (pressed.join('').includes(secretCode)) {
+    console.log('DING DING!');
+    cornify_add();
+  }
+  console.log(pressed);
+});
+</script>
+</body>
+</html>

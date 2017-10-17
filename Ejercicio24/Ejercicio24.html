@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Historias</title>
+  <link rel="stylesheet" href="style-FINISHED.css">
+</head>
+<body> 
+<body bgcolor=#FFF176></body>
+  <header>
+    <h1><center>Una historia para perderse</center></h1>
+  </header>
+
+  <nav id="main">
+    <ul>
+      <li class="logo"><a href="#">LOST.</a></li>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Acerca de</a></li>
+      <li><a href="#">Imagenes</a></li>
+      <li><a href="#">Localizacion</a></li>
+      <li><a href="#">Mapas</a></li>
+    </ul>
+  </nav>
+
+  <div class="site-wrap">
+    <p>Somos afortunados de vivir en un país que es vasto en cultura, historia y gastronomía, las tierras fértiles permiten la siembra de cientos de productos, entre ellos el que nos compete en este espacio, el café; y en esta entrada queremos platicarte un poco sobre la afortunada llegada de este grano a México, su proliferación, popularización y de cómo se ha quedado impregnado en nuestros corazones y en nuestro hogar.</p>
+    <center><img src="http://esdiario.com.mx/wp-content/uploads/2014/10/178.jpg" class="align-left slide-in"></center>
+    <p>Para llegar a nuestra mesa y deleitarnos cada mañana con su sabor, el café tuvo que recorrer desde Etiopía, su país de origen, grandes caminos y romper fuertes estigmas, afortunadamente el sabor y las cualidades de esta bebida enamoran a cualquiera, por lo que no fue complicado que pronto comenzara su expansión por el resto del mundo.
+         Siguiendo los pasos de la integración del café hacia el continente Americano y México, nos encontramos con la leyenda de un caballero francés llamado Gabriel Mathieu du Clieu, quien en el año 1723 fuera capitán de la infantería en Martinica, cuando fue llamado para regresar a Francia, tuvo la genial idea de llevar consigo una planta de cafeto de los jardines botánicos de aquel país, cuando regresó a la isla de Martinica junto con su nueva adquisición, se vieron atrapados en una tormenta seguida de aguas calmas, por lo que el viaje se retrasó bastante tiempo, las reservas de agua no eran suficientes por lo que tuvieron que racionar su consumo, y de Clieu, empecinado en llevar el cafeto hasta Martinica, compartió su ración de agua con la planta, logrando que llegara viva  hasta los plantíos de la isla. </p>
+    <center><img src="http://img.aws.la-croix.com/2015/07/12/1333838/En-1721-capitaine-Gabriel-Clieu-confier-Louis-XV-mission-replanter-deux-cafeiers-Martinique_1_730_200.jpg" class="align-right slide-in"></center>
+    <p> Esta planta que acompañó a du Clieu es considerada por algunos como el origen de los cafetos en las Antillas y en la mayor parte de América, se cree que la primer cosecha tuvo lugar en 1726, la cual fue muy abundante, tanto que llegó hasta las islas de Guadalupe, siendo introducido después a Haití y a Santo Domingo.
+        
+        Muchos más viajeros contribuyeron a que el café se expandiera el resto de América, entre ellos el inglés Nicholas Lewis, quien en 1730, introdujo el cafeto a Jamaica, los responsables de que el café llegara a Filipinas fueron unos misioneros españoles de nombre desconocido, quienes dejaron la planta en Java en 1740, a Cuba llegó gracias a José Antonio Gelabert, ya corría para entonces el año de 1748.</p>
+    <p>Se tienen registros de que el café llegó a México desde las Antillas cuando corría  1790, entró directamente por Veracruz, en donde se comenzó a cultivar y a exportar llegando 1802, Juan Antonio Gómez fue el responsable de intensificar el cultivo en este estado en el año de 1817, aunque muchos señalan que la introducción del café a nuestras tierras fue directamente de Cuba.
+        El café que llegó al estado de Chiapas, fue introducido directamente desde Guatemala, y el café que crece en Michoacán, llegó desde el puerto de Moka en Yemen, en donde se extendería hacia Jalisco, Nayarit y Colima.</p>
+    <center><img src="https://cdnblog.mexicodestinos.com/blog/wp-content/uploads/2014/07/cafe.jpg" class="align-right slide-in"></center>
+    <p>Pasaron un par de décadas antes de que el café fuera adquiriendo fama en el país, pues el chocolate estaba más que arraigado en las costumbres de consumo de los mexicanos, pero una vez que el paladar y el olfato adquirieron el gusto por esta bebida, no se fue de los corazones de todos los consumidores y comenzaron a surgir las primeras cafeterías, el primer expendio de café del que se tiene registro, fue abierto a finales del siglo XVIII en la calle de Tacuba, en el centro histórico de la Ciudad de México, convirtiéndose en uno de los puntos preferidos para las tertulias y reuniones de los ciudadanos y personajes de la aristocracia.</p>
+    <p>Ya corriendo los últimos años del siglo XIX, las cafeterías comenzaron a expandirse por todo el país, siendo las principales de la capital los cafés El Cazador y Minerva, más adelante se abrió el famoso Café Colón, el París y el Monte Carlo, también surgieron las históricas cafeterías la Paix, La Mansión Dorée, alcanzando ya los primeros años del siglo XX , abrieron sus puertas las famosas cafeterías Sanborn´s, Café Tacuba, Café la Habana y el Café Madrid, junto con estas cafeterías, surgió una de las tradiciones más arraigadas en la gastronomía del centro del país, los cafés de chinos, además de numerosas cafeterías dentro de los más lujosos hoteles, algunas aún quedan en pie y sirviendo el más exquisito café con historia y siglos de tradición.
+        En Michoacán también hay registro de cafeterías sumamente famosas, como la que se encontraba dentro del Hotel de la Soledad, el cual fue catalogado por el pintor neoyorkino F. A. Hopkinson Smith como "el mejor del mundo".</p>
+  </div>
+
+  <script>
+    // Not a ton of code, but hard to
+    const nav = document.querySelector('#main');
+    let topOfNav = nav.offsetTop;
+    function fixNav() {
+      if(window.scrollY >= topOfNav) {
+        document.body.style.paddingTop = nav.offsetHeight + 'px';
+        document.body.classList.add('fixed-nav');
+      } else {
+        document.body.classList.remove('fixed-nav');
+        document.body.style.paddingTop = 0;
+      }
+    }
+    window.addEventListener('scroll', fixNav);
+  </script>
+
+</body>
+</html>

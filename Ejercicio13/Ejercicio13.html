@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Documento</title>
+</head>
+<body>
+
+  <div class="site-wrap">
+
+    <h1>Investigación Informática</h1>
+
+    <p>Los continuos avances tecnológicos están conllevando asimismo la proliferación de actividades ilícitas que podríamos denominar como "delitos informáticos" y que son actos que suelen ir contra la confidencialidad, integridad y disponibilidad de los datos informáticos, las redes y los sistemas informáticos.</p>
+    <p>Esto supone una dificultad añadida para aplicar la ley, pues las evidencias electrónicas pueden ser rápidamente eliminadas o perdidas, haciendo así más difícil su persecución legal. Por ello, se necesita un modo de rescatar y preservar esos datos rápidamente.</p>
+    <p>investigacion informatica forence</p>
+    <p>La Informática Forense recopila y utiliza las evidencias informáticas para esclarecer los delitos informáticos usando técnicas y tecnologías avanzadas. El equipo de Investigación Informática utiliza estas técnicas para descubrir evidencias en cualquier dispositivo de almacenamiento informático como discos duros, cintas de backup, ordenadores, portátiles, memorias usb, archivos, correos electrónicos, etc.</p>
+    <p>En Investigación Informática trabajamos para descubrir fraudes, usos no autorizados de ordenadores, violación de confidencialidad o de políticas de empresa, investigación de uso informático inadecuado en horario laboral, historial de chats, archivos y navegación web o cualquier otra forma de comunicaciones electrónicas, accesos no autorizados a los sistemas informáticos, robo de datos informáticos, sabotajes informáticos, robo de identidad, pornografía infantil, etc .</p>
+    <p>Todo lo anterior se lleva a cabo mediante la Investigación Forense, el Peritaje Informático, la Recuperación de Datos y el Borrado Seguro de Datos, entre otros, concluyendo con la elaboración de un Informe Pericial y la asistencia a juicio en aquellos casos en que sea necesario.</p>
+
+    <img src="http://www.grupodetectivesaipasa.com/images/informaticaforense.jpg" class="align-left slide-in">
+
+    <p>Además, en Investigación Informática ofrecemos soluciones de prevención ante desastres informáticos: sistemas de Copias de Seguridad, Garantías de Recuperación de Datos, y un completo servicio de asesoramiento y consultoría en temas de seguridad informática.</p>
+
+    <img src="http://www.datamanager.it/wp-content/uploads/2014/04/sysdata-italia-e-bper-lanciano-il-progetto-adotta-lanagrafe-timbro_digitale_sysdata.jpg" class="align-right slide-in">
+
+    <p> Seguridad Informática</p>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7Kf6__kjBFtzYnNbEQOKha-GqKafVwR7UV_g9c_dgPSRAi0Gmuw" class="align-left slide-in">
+
+    <p>La seguridad informática no es sólo importante para garantizar confianza ante sus usuarios, sino que es necesaria desde el momento en el que hay una transferencia de datos privados, como sucede en el caso de la mayoría de empresas en la actualidad.</p>
+
+
+    <p>Un fallo por pequeño que sea, cualquier detalle que se le escape del control a una empresa, puede provocar desconfianza y grandes pérdidas e incurrir en una mala imagen. </p>
+
+    <img src="https://3c1703fe8d.site.internapcdn.net/newman/csz/news/800/2015/99-researcherss.jpg" class="align-right slide-in">
+
+    <p>Por eso es importante e indispensable disponer de adecuados sistemas de seguridad que aseguren la privacidad de sus datos y eviten el riesgo de pérdidas irreparables para su negocio. </p>
+    <p>Para ello, en Investigación Informática además de las Copias de Seguridad y los Garantías de Recuperación de Datos explicados en sus correspondientes apartados, ofrecemos a nuestros clientes otros productos y servicios para mantener la seguridad informática:.</p>
+
+
+
+
+  </div>
+
+  <script>
+    function debounce(func, wait = 20, immediate = true) {
+      var timeout;
+      return function() {
+        var context = this, args = arguments;
+        var later = function() {
+          timeout = null;
+          if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+      };
+    };
+    const sliderImages = document.querySelectorAll('.slide-in');
+    function checkSlide() {
+      sliderImages.forEach(sliderImage => {
+        // half way through the image
+        const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2;
+        // bottom of the image
+        const imageBottom = sliderImage.offsetTop + sliderImage.height;
+        const isHalfShown = slideInAt > sliderImage.offsetTop;
+        const isNotScrolledPast = window.scrollY < imageBottom;
+        if (isHalfShown && isNotScrolledPast) {
+          sliderImage.classList.add('active');
+        } else {
+          sliderImage.classList.remove('active');
+        }
+      });
+    }
+    window.addEventListener('scroll', debounce(checkSlide));
+  </script>
+
+  <style>
+    html {
+      box-sizing: border-box;
+      background:#FFEE58;
+      font-family:'helvetica neue';
+      font-size: 20px;
+      font-weight: 200;
+    }
+    body {
+      margin: 0;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+    h1 {
+      margin-top: 0;
+    }
+    .site-wrap {
+      max-width: 700px;
+      margin: 100px auto;
+      background:white;
+      padding:40px;
+      text-align: justify;
+    }
+    .align-left {
+      float:left;
+      margin-right:20px;
+    }
+    .align-right {
+      float:right;
+      margin-left:20px;
+    }
+    .slide-in {
+      opacity:0;
+      transition:all .5s;
+    }
+    .align-left.slide-in {
+      transform:translateX(-30%) scale(0.95);
+    }
+    .align-right.slide-in {
+      transform:translateX(30%) scale(0.95);
+    }
+    .slide-in.active {
+      opacity:1;
+      transform:translateX(0%) scale(1);
+    }
+  </style>
+
+</body>
+</html>
